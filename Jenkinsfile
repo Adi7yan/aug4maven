@@ -7,9 +7,7 @@ pipeline {
             steps {
                
                     sh 'mvn compile'
-                    script {
-                           error "This pipeline stops here!"
-                           }
+                
                 
             }
         }
@@ -17,18 +15,14 @@ pipeline {
             steps {
                
                     sh 'mvn tet'
-                    script {
-                           error "This pipeline stops here!"
-                           }
+                 
             }
         }
         stage ('Deployment Stage') {
             steps {
                
                     sh 'mvn package'
-                    script {
-                           error "This pipeline stops here!"
-                           }
+          
             }
         }
     }
